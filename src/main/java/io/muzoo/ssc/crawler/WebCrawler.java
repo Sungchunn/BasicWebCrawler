@@ -20,8 +20,13 @@ public class WebCrawler implements Crawler {
     private final ProgressTracker progressTracker;
     private final Set<String> visitedUrls = new HashSet<>();
 
-    // Constructor 
-    public WebCrawler(String baseUrl, String outputDir, Downloader downloader, UrlHandler urlHandler, ProgressTracker progressTracker) {
+    // Constructor
+    public WebCrawler(
+            String baseUrl,
+            String outputDir,
+            Downloader downloader,
+            UrlHandler urlHandler,
+            ProgressTracker progressTracker) {
         this.baseUrl = baseUrl;
         this.outputDir = outputDir;
         this.downloader = downloader;

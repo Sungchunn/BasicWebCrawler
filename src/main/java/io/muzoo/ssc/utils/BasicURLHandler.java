@@ -3,7 +3,7 @@ package io.muzoo.ssc.utils;
 import java.net.URI;
 import java.net.URISyntaxException;
 
-public class BasicURLHandler implements URLHandler {
+public class BasicURLHandler implements UrlHandler {
 
     @Override
     public String cleanUrl(String url) {
