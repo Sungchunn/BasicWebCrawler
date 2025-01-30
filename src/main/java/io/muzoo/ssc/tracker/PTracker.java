@@ -1,31 +1,26 @@
 package io.muzoo.ssc.tracker;
 
-public class PTracker implements ProgressTracker {
+public class PTracker {
     private int totalUrls = 0;
     private int downloadedUrls = 0;
     private String currentUrl = "";
 
-    @Override
-    public void incrementTotalUrls() {
-        totalUrls++;
+    public void setTotalUrls(int total) {
+        this.totalUrls = total;
     }
 
-    @Override
-    public void incrementDownloadUrls() {
+    public void incrementDownloadedUrls(String url) {
         downloadedUrls++;
+        currentUrl = url;
         printProgress();
     }
 
-    @Override
     public void printProgress() {
         if (totalUrls == 0) {
-            System.out.println("No URLs to download yet.");
+            System.out.println("Total URLs not set yet.");
             return;
         }
-        // Calculate progress percentage
         double progressPercentage = (double) downloadedUrls / totalUrls * 100;
-
-        // Print the formatted progress
         System.out.printf("%.2f%% (%d/%d URLs are downloaded) - %s%n",
                 progressPercentage, downloadedUrls, totalUrls, currentUrl);
     }
