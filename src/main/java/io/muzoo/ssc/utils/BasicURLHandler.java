@@ -38,11 +38,13 @@
 
 package io.muzoo.ssc.utils;
 
+import io.muzoo.ssc.assignment.tracker.SscAssignment;
+
 import java.io.File;
 import java.net.URI;
 import java.net.URISyntaxException;
 
-public class BasicURLHandler implements UrlHandler {
+public class BasicURLHandler extends SscAssignment implements UrlHandler {
 
     @Override
     public String cleanUrl(String url) {
