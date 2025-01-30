@@ -1,6 +1,6 @@
 package io.muzoo.ssc.tracker;
 
-public class PTracker {
+public class PTracker  {
     private int totalUrls = 0;
     private int downloadedUrls = 0;
     private String currentUrl = "";
