@@ -1,8 +1,6 @@
 package io.muzoo.ssc.tracker;
 
-import io.muzoo.ssc.assignment.tracker.SscAssignment;
-
-public class PTracker extends SscAssignment {
+public class PTracker {
     private int totalUrls = 0;
     private int downloadedUrls = 0;
     private String currentUrl = "";
